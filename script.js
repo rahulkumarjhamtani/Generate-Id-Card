@@ -62,6 +62,7 @@ function newField() {
 
 function addField() {
   //let labelName = document.getElementById("labelName").value;
+  //document.getElementById("labelName").value = "";
 
   let labelName = document.getElementById("labelName").value;
   //let labeltype = document.getElementById("labelType").value;
@@ -75,9 +76,16 @@ function addField() {
   label.appendChild(document.createTextNode(labelName));
   inputType.setAttribute("type", labelType);
 
+  let b = document.createElement("b");
+  b.appendChild(document.createTextNode(labelName+':'));
+  document.getElementById("setField").appendChild(b);
+  document.getElementById("setField").appendChild(br);
+
   document.getElementById("newField").appendChild(label);
   document.getElementById("newField").appendChild(inputType);
   document.getElementById("newField").appendChild(br);
+
+
 
   modal2.style.display = "none";
   modal.style.display = "block";
