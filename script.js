@@ -38,19 +38,22 @@ function previewCard() {
   document.getElementById("showClass").innerText = clas;
 
   var elements = document.getElementsByName('new');
+  var names = document.getElementsByName('newName');
 
   document.getElementById("idCard").style.display = "block";
   window.location = "#idCard";
 
+  var k = 0;
   elements.forEach((element) => {
     let b = document.createElement("b");
-    b.appendChild(document.createTextNode(labelName+':'));
+    b.appendChild(document.createTextNode(names[k].innerText+':'));
     document.getElementById("setField").appendChild(b);
     let i = document.createElement("i");
     i.appendChild(document.createTextNode(element.value));
     document.getElementById("setField").appendChild(i);
     let br = document.createElement("br");
     document.getElementById("setField").appendChild(br);
+    k++;
   })
 }
 
@@ -88,6 +91,7 @@ function addField() {
   let inputType = document.createElement("input");
 
   label.appendChild(document.createTextNode(labelName));
+  label.setAttribute("name", 'newName');
   inputType.setAttribute("type", labelType);
   inputType.setAttribute("name", 'new');
 
