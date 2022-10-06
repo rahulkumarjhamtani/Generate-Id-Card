@@ -1,5 +1,6 @@
 /* The Modal (background) */
-.modal, .modal2 {
+.modal,
+.modal2 {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -36,60 +37,49 @@
   cursor: pointer;
 }
 
-.center
-{
-    text-align: center;
-    width: 100%;
-    margin-top: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.center {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-#myBtn
-{
-    font-size:20px;
-    padding:5px 10px;
-    margin-top: 20px;
-    cursor:pointer;
+#myBtn {
+  font-size: 20px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-.fields
-{
-    line-height: 2.6;
+.fields {
+  line-height: 2.6;
 }
 
-label
-{
-    float: left;
-    margin-left: 20rem;
+label {
+  float: left;
+  margin-left: 20rem;
 }
 
-input
-{
-    float: left;
-    margin-left: 3rem;
-    margin-top: 7px;
+input {
+  float: left;
+  margin-left: 3rem;
+  margin-top: 7px;
 }
 
-
-#date
-{
-    margin-left: 3.57rem;
-
+#date {
+  margin-left: 3.57rem;
 }
 
-#idCard
-{
-    display: none;
-    border: 5px dashed rgb(5, 2, 51);
-    width: 30%;
-    border-radius: 30px;
+#idCard {
+  display: none;
+  border: 5px dashed rgb(5, 2, 51);
+  width: 30%;
+  border-radius: 30px;
 }
 
-#labelType
-{
-    float: left;
-    margin-left: 3.2rem;
-    margin-top: 0.7rem;
+#labelType {
+  float: left;
+  margin-left: 3.2rem;
+  margin-top: 0.7rem;
 }
-
-
