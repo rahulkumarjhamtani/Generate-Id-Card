@@ -27,6 +27,7 @@ window.onclick = function (event) {
   }
 };
 
+
 function previewCard() {
   var name = document.getElementById("name").value;
   var date = document.getElementById("date").value;
@@ -36,8 +37,21 @@ function previewCard() {
   document.getElementById("showDate").innerText = date;
   document.getElementById("showClass").innerText = clas;
 
+  var elements = document.getElementsByName('new');
+
   document.getElementById("idCard").style.display = "block";
   window.location = "#idCard";
+
+  elements.forEach((element) => {
+    let b = document.createElement("b");
+    b.appendChild(document.createTextNode(labelName+':'));
+    document.getElementById("setField").appendChild(b);
+    let i = document.createElement("i");
+    i.appendChild(document.createTextNode(element.value));
+    document.getElementById("setField").appendChild(i);
+    let br = document.createElement("br");
+    document.getElementById("setField").appendChild(br);
+  })
 }
 
 var loadFile = function (event) {
@@ -59,12 +73,12 @@ function newField() {
   modal.style.display = "none";
   modal2.style.display = "block";
 }
-
+var labelName = '';
 function addField() {
   //let labelName = document.getElementById("labelName").value;
   //document.getElementById("labelName").value = "";
 
-  let labelName = document.getElementById("labelName").value;
+  labelName = document.getElementById("labelName").value;
   //let labeltype = document.getElementById("labelType").value;
   let labelVal = document.getElementsByName("labelType")[0];
   let labelType = labelVal.options[labelVal.selectedIndex].text;
@@ -75,16 +89,12 @@ function addField() {
 
   label.appendChild(document.createTextNode(labelName));
   inputType.setAttribute("type", labelType);
+  inputType.setAttribute("name", 'new');
 
-  let b = document.createElement("b");
-  b.appendChild(document.createTextNode(labelName+':'));
-  document.getElementById("setField").appendChild(b);
-  document.getElementById("setField").appendChild(br);
 
   document.getElementById("newField").appendChild(label);
   document.getElementById("newField").appendChild(inputType);
   document.getElementById("newField").appendChild(br);
-
 
 
   modal2.style.display = "none";
